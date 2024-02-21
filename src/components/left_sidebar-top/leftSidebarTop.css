@@ -1,0 +1,24 @@
+.leftSidebarTop {
+  width: 15vw;
+  border-radius: 10px;
+  padding: 18px;
+  background-color: rgba(48, 44, 44, 0.781);
+  color: white;
+  height: 12vh;
+}
+
+.home,
+.search {
+  background-color: transparent;
+}
+
+.home a,
+.search a {
+  display: flex;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.logo_brandName {
+  background-color: transparent;
+}

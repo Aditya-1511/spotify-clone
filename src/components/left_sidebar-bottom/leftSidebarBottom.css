@@ -1,0 +1,19 @@
+.leftSidebarBottom {
+  width: 15vw;
+  border-radius: 10px;
+  padding: 18px;
+  background-color: rgba(48, 44, 44, 0.781);
+  color: white;
+  height: 75vh;
+  margin-top: 3%;
+}
+
+.your_library {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_and_image {
+  display: flex;
+  gap: 10px;
+}

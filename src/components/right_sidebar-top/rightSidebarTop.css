@@ -1,0 +1,53 @@
+.rightSidebar-top {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(27, 25, 25, 0.849);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.navigation_arrows {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  gap: 10px;
+}
+
+.right_arrow,
+.left_arrow {
+  border-radius: 100%;
+  font-size: 25px;
+  padding: 2px;
+  text-align: center;
+  color: white;
+}
+
+.auth_buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 10vw;
+  background-color: transparent;
+}
+
+.signUp_button,
+.login_button {
+  background-color: transparent;
+  color: aliceblue;
+  border: none;
+  font-weight: bolder;
+}
+
+.login_button {
+  background-color: white;
+  color: black;
+  width: 50%;
+  border-radius: 15px;
+}
+
+.signUp_button:hover,
+.login_button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
