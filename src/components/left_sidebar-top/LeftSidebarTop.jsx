@@ -12,14 +12,14 @@ function LeftSidebarTop() {
           <FaSpotify /> Spotify
         </div>
         <div className="home">
-          <a href="#home">
+          <a href="/">
             {" "}
             <GoHomeFill />
             Home
           </a>
         </div>
         <div className="search">
-          <a href="#search">
+          <a href="/search">
             {" "}
             <CiSearch />
             Search

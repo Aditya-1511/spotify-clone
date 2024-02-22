@@ -6,6 +6,7 @@ import RightSidebarBottom from "./components/right_sidebar-bottom/RightSidebarBo
 import RightSidebarTop from "./components/right_sidebar-top/RightSidebarTop";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./components/signup/Signup";
+import Login from "./components/login/Login";
 
 function App() {
   return (
@@ -37,6 +38,11 @@ function App() {
         <div className="signup">
           <Routes>
             <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </div>
+        <div className="login">
+          <Routes>
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
       </div>
