@@ -7,6 +7,7 @@
   background-image: linear-gradient(90deg, #af2896, #509bf5);
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .footer_h6,
@@ -22,9 +23,10 @@
   border: none;
   padding: 10px;
   font-weight: bolder;
+  transition: transform 0.3s ease;
 }
 
 .sign_up_for_free_button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }

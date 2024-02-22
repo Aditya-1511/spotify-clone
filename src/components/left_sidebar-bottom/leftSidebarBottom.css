@@ -51,10 +51,11 @@
   padding: 5px;
   border-radius: 15px;
   border: none;
+  transition: transform 0.3s ease;
 }
 
 .browse_podcasts_button:hover,
 .create_playlist_button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }

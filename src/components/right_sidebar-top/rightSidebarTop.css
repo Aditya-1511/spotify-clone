@@ -37,6 +37,7 @@
   color: aliceblue;
   border: none;
   font-weight: bolder;
+  transition: transform 0.3s ease;
 }
 
 .login_button {
@@ -48,6 +49,7 @@
 
 .signUp_button:hover,
 .login_button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-width: 2px;
   cursor: pointer;
 }
