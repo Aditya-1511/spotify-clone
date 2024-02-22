@@ -1,17 +1,14 @@
 .rightSidebar {
-  width: 83vw;
+  width: 75vw;
   border-radius: 0 0 10px 10px;
   padding: 18px;
   background-color: rgba(48, 44, 44, 0.781);
   color: white;
-  height: 81vh;
+  height: 82vh;
   display: flex;
   flex-direction: column;
 }
 
-/* .spotify_playlists {
-  background-color: transparent;
-} */
 
 .playlist_cards {
   display: flex;
@@ -19,7 +16,6 @@
   height: max-content;
   width: 100%;
   padding: 10px;
-  /* background-color: rgba(48, 44, 44, 0.781); */
 }
 
 .playlist1 {
