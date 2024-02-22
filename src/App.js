@@ -5,6 +5,7 @@ import LeftSidebarTop from "./components/left_sidebar-top/LeftSidebarTop";
 import RightSidebarBottom from "./components/right_sidebar-bottom/RightSidebarBottom";
 import RightSidebarTop from "./components/right_sidebar-top/RightSidebarTop";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Signup from "./components/signup/Signup";
 
 function App() {
   return (
@@ -12,16 +13,31 @@ function App() {
       <div className="mainWrapper">
         <div className="main">
           <div className="lefSide">
-            <Routes><Route path="/" element={<LeftSidebarTop />} /></Routes>
-            <Routes><Route path="/" element={<LeftSidebarBottom />} /></Routes>
+            <Routes>
+              <Route path="/" element={<LeftSidebarTop />} />
+            </Routes>
+            <Routes>
+              <Route path="/" element={<LeftSidebarBottom />} />
+            </Routes>
           </div>
           <div className="rightSide">
-            <Routes><Route path="/" element={<RightSidebarTop />} /></Routes>
-            <Routes><Route path="/" element={<RightSidebarBottom />} /></Routes>
+            <Routes>
+              <Route path="/" element={<RightSidebarTop />} />
+            </Routes>
+            <Routes>
+              <Route path="/" element={<RightSidebarBottom />} />
+            </Routes>
           </div>
         </div>
         <div className="footer_main">
-          <Routes><Route path="/" element={<Footer />} /></Routes>
+          <Routes>
+            <Route path="/" element={<Footer />} />
+          </Routes>
+        </div>
+        <div className="signup">
+          <Routes>
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
         </div>
       </div>
     </BrowserRouter>
