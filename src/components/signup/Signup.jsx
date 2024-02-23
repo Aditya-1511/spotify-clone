@@ -24,8 +24,9 @@ function Signup() {
               <h6>Use phone number instead</h6>
             </a>
             <button className="next_button">Next</button>
-            {/* <h2><span>or askjd asjhda ds</span></h2> */}
-            <hr />
+            <div class="line-with-text">
+              <span class="text">or</span>
+            </div>
             <br />
             <button className="google_login_button">
               <FcGoogle /> Sign up with Google

@@ -5,7 +5,7 @@
 
 .signup_form {
   position: absolute;
-  width: 25vw;
+  width: 20vw;
   top: 0;
   bottom: 0;
   left: 0;
@@ -84,4 +84,22 @@
 
 .signup_form a {
   text-decoration: underline;
+}
+
+.line-with-text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.line-with-text::before,
+.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid white;
+}
+
+.line-with-text .text {
+  padding: 0 10px;
+  white-space: nowrap;
 }
