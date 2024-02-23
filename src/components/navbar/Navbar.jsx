@@ -5,12 +5,14 @@ import { FaSpotify } from "react-icons/fa";
 function Navbar() {
   return (
     <>
-      <div className="navbar_wrapper">
-        <h2 className="brand_name_and_logo">
-          <FaSpotify />
-          Spotify
-        </h2>
-      </div>
+      <a href="/">
+        <div className="navbar_wrapper">
+          <h2 className="brand_name_and_logo">
+            <FaSpotify />
+            Spotify
+          </h2>
+        </div>
+      </a>
     </>
   );
 }
