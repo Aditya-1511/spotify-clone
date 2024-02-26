@@ -22,6 +22,26 @@ const config = require("../../../config");
 
 //========================== Load Modules End ==============================================
 
+function userSignup(params) {
+  return usrService
+    .isEmailExist(params)
+    .bind({})
+    .then(function (isExist) {
+      this.isExist = isExist;
+
+      if (isExist) {
+        return customException.alreadyRegistered();
+      } else {
+        return usrService.userSignup(params);
+      }
+    })
+    .then((result) => {
+      if (result) {
+        return userMapper.userSignup(params);
+      }
+    });
+}
+
 function userLogin(params) {
   return usrService
     .isEmailExist(params)
@@ -72,6 +92,7 @@ function _buildUserTokenGenObj(user) {
 
 module.exports = {
   userLogin,
+  userSignup,
 };
 
 //========================== Export Module End ================================

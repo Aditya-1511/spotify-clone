@@ -17,6 +17,15 @@ function loginMapping(params) {
   return respObj;
 }
 
+function userSignup(params) {
+  var respObj = {
+    message: "Signup successfull",
+    result: params,
+  };
+  return respObj;
+}
+
 module.exports = {
   loginMapping,
+  userSignup,
 };

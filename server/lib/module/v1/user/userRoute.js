@@ -10,6 +10,19 @@ const validators = require("./userValidators");
 const constant = require("../../../constant");
 //==============================================================
 
+router.route("/signup").post([validators.validateLogin], function (req, res) {
+  let { email, password } = req.body;
+  let clientIp = requestIp.getClientIp(req);
+  userFacade
+    .userSignup({ email, password, clientIp })
+    .then(function (result) {
+      resHndlr.sendSuccess(res, result, req);
+    })
+    .catch(function (err) {
+      resHndlr.sendError(res, err, req);
+    });
+});
+
 router.route("/login").post([validators.validateLogin], function (req, res) {
   let { email, password } = req.body;
   let clientIp = requestIp.getClientIp(req);

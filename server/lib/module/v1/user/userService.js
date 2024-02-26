@@ -7,6 +7,17 @@ const userDao = require("./userDao");
 
 //========================== Load Modules End ==============================================
 
+function userSignup(params) {
+  params.password = appUtils.createHashSHA256(params.password);
+  return userDao.getByKey({ email: params.email }).then(function (result) {
+    if (!result) {
+      return userDao.createUser(params);
+    } else {
+      return result;
+    }
+  });
+}
+
 function login(params) {
   let query = {};
   query.email = params.email;
@@ -41,6 +52,7 @@ function getByKey(param) {
 //========================== Export Module Start ==============================
 
 module.exports = {
+  userSignup,
   createAdmin,
   login,
   isEmailExist,
