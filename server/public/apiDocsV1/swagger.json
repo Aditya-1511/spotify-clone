@@ -1,0 +1,101 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Spotify Clone",
+    "description": "This is the API documentation for spotify-clone developed by Aditya Pandey.In case of any issue, you can contact me on my Email below.",
+    "contact": {
+      "email": "aditya1511ge@gmail.com"
+    },
+    "version": "1.0.0",
+    "termsOfService": "http://swagger.io/terms/",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "User",
+      "description": "Operations about user",
+      "externalDocs": {
+        "description": "",
+        "url": ""
+      }
+    }
+  ],
+  "schemes": ["http", "https"],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "produces": ["application/json"],
+  "paths": {
+    "/user/login": {
+      "post": {
+        "deprecated": false,
+        "tags": ["User"],
+        "description": "Login",
+        "consumes": ["application/x-www-form-urlencoded"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "description": "password",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "deviceID",
+            "in": "formData",
+            "description": "deviceID",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deviceToken",
+            "in": "formData",
+            "description": "deviceToken",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deviceTypeID",
+            "in": "formData",
+            "description": "1= IOS, 2=Android , 3=web",
+            "required": false,
+            "enum": [1, 2, 3],
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": ["Username: ", "Password: "]
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "basicAuth": {
+      "type": "basic"
+    }
+  }
+}
