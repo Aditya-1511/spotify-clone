@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import Navbar from "../navbar/Navbar";
+import { Link } from "react-router-dom";
 
 function Signup() {
   return (
@@ -24,8 +25,8 @@ function Signup() {
               <h6>Use phone number instead</h6>
             </a>
             <button className="next_button">Next</button>
-            <div class="line-with-text">
-              <span class="text">or</span>
+            <div className="line-with-text">
+              <span className="text">or</span>
             </div>
             <br />
             <button className="google_login_button">
@@ -46,7 +47,10 @@ function Signup() {
             <h4>
               Already have an account? &nbsp;
               <span>
-                <a href="/login">Log in here.</a>
+                {/* <a href="/login">Log in here.</a> */}
+                <Link className="signup_for_spotify_loginPage" to="/login">
+                  Sign up for Spotify
+                </Link>
               </span>
             </h4>
           </form>
